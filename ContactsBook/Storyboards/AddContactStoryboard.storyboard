@@ -13,7 +13,7 @@
         <!--Add Contact View Controller-->
         <scene sceneID="Cca-om-M0f">
             <objects>
-                <viewController id="CH8-X0-fzP" customClass="AddContactViewController" customModule="ContactsBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddContactVC" id="CH8-X0-fzP" customClass="AddContactViewController" customModule="ContactsBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yjh-Mo-OsR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,7 +120,7 @@
         <!--Navigation Controller-->
         <scene sceneID="uSZ-dc-5bN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hgo-yv-zMR" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AddContactNC" automaticallyAdjustsScrollViewInsets="NO" id="hgo-yv-zMR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DMq-FX-hlG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

@@ -18,5 +18,5 @@ class Contact: Object {
     @objc dynamic var name: String = ""
     @objc dynamic var phone: String = ""
     @objc dynamic var address: String = ""
-    var location: Location? = nil
+    @objc dynamic var location: Location? = nil
 }

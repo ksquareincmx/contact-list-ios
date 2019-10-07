@@ -30,7 +30,9 @@ class ContactListViewController: UIViewController {
     }
     
     //MARK: - Actions
-    @IBAction func addContactBarButtonItemAction(_ sender: UIBarButtonItem) {
+    @IBAction func addContactBarButtonItemAction(_ sender: UIBarButtonItem)
+    {
+        
     }
 }
 
