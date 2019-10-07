@@ -7,15 +7,16 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Location {
-    var latitude: Double
-    var longitude: Double
+class Location: Object {
+    @objc dynamic var latitude: Double = 0.0
+    @objc dynamic var longitude: Double = 0.0
 }
 
-struct Contact {
-    var name: String
-    var phone: String
-    var address: String
-    var location: Location
+class Contact: Object {
+    @objc dynamic var name: String = ""
+    @objc dynamic var phone: String = ""
+    @objc dynamic var address: String = ""
+    var location: Location? = nil
 }
