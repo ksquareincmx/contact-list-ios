@@ -13,6 +13,9 @@ class ContactListViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var contactsTableView: UITableView!
     
+    //MARK: - Properties
+    let contacts = MyRealm().shared.objects(Contact.self)
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +35,7 @@ class ContactListViewController: UIViewController {
     //MARK: - Actions
     @IBAction func addContactBarButtonItemAction(_ sender: UIBarButtonItem)
     {
-        navigate(.addContact)
+        navigate(.addContact(delegate: self))
     }
 }
 
@@ -40,11 +43,19 @@ extension ContactListViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ContactTableViewCell.self), for: indexPath) as! ContactTableViewCell
         
+        let contact = contacts[indexPath.row]
+        cell.contact = contact
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.contacts.count
     }
 }
 
+extension ContactListViewController: AddContactViewControllerDelegate {
+    func didAddContact() {
+        self.contactsTableView.reloadData()
+    }
+}

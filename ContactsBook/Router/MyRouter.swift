@@ -9,6 +9,6 @@
 import Foundation
 
 enum MyRouter: Navigation {
-    case addContact
-    case updateContact(_ contact: Contact)
+    case addContact(delegate: AddContactViewControllerDelegate?)
+    case updateContact(_ contact: Contact, delegate: AddContactViewControllerDelegate?)
 }

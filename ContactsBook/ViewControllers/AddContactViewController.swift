@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol AddContactViewControllerDelegate: class {
+    func didAddContact()
+}
+
 class AddContactViewController: UIViewController {
     
     //MARK: - Outlets
@@ -19,6 +23,8 @@ class AddContactViewController: UIViewController {
     
     //MARK: - Properties
     var contact: Contact?
+    lazy var myRealm = MyRealm()
+    var delegate: AddContactViewControllerDelegate?
     
     //MARK: - Lifecycle
     
@@ -34,14 +40,25 @@ class AddContactViewController: UIViewController {
     }
     
     @IBAction func saveBarButtonAction(_ sender: UIBarButtonItem) {
-        if let contact = contact {
+        if let _ = contact {
             //Update contact
+            
             
         } else {
             //Save new contact
-            
+            guard let name = self.nameTextField.text, let phone = self.phoneTextField.text, let address = self.addressTextField.text else {
+                return
+            }
+            let newContact = Contact()
+            newContact.name = name
+            newContact.phone = phone
+            newContact.address = address
+            self.myRealm.write(newContact)
+            self.dismiss(animated: true) {
+                self.delegate?.didAddContact()
+            }
         }
-        self.dismiss(animated: true, completion: nil)
+        
     }
     
     @IBAction func cancelBarButtonAction(_ sender: UIBarButtonItem) {

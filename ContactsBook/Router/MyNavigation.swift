@@ -12,17 +12,22 @@ struct MyNavigation: AppNavigation {
     func viewcontrollerForNavigation(navigation: Navigation) -> UIViewController {
         if let navigation = navigation as? MyRouter {
             switch navigation {
-            case .addContact:
+            case .addContact(let delegate):
                 let sb = UIStoryboard(name: "AddContactStoryboard", bundle: nil)
-                let navController = sb.instantiateViewController(withIdentifier: "AddContactNC")
+                let navController = sb.instantiateViewController(withIdentifier: "AddContactNC") as! UINavigationController
+                guard let addContactVC = navController.topViewController as? AddContactViewController else {
+                    return UIViewController()
+                }
+                addContactVC.delegate = delegate
                 return navController
-            case .updateContact(let contact):
+            case .updateContact(let contact, let delegate):
                 let sb = UIStoryboard(name: "AddContactStoryboard", bundle: nil)
                 let navController = sb.instantiateViewController(withIdentifier: "AddContactNC") as! UINavigationController
                 guard let addContactVC = navController.topViewController as? AddContactViewController else {
                     return UIViewController()
                 }
                 addContactVC.contact = contact
+                addContactVC.delegate = delegate
                 return addContactVC
             }
         }

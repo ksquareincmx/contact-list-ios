@@ -15,7 +15,7 @@ class Location: Object {
 }
 
 class Contact: Object {
-    @objc dynamic var id = 0
+    @objc dynamic var id = UUID().uuidString
     @objc dynamic var name: String = ""
     @objc dynamic var phone: String = ""
     @objc dynamic var address: String = ""
