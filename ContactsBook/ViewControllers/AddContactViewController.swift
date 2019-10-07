@@ -17,6 +17,9 @@ class AddContactViewController: UIViewController {
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var chooseLocationButton: UIButton!
     
+    //MARK: - Properties
+    var contact: Contact?
+    
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -33,10 +36,10 @@ class AddContactViewController: UIViewController {
     }
     
     @IBAction func saveBarButtonAction(_ sender: UIBarButtonItem) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelBarButtonAction(_ sender: UIBarButtonItem) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
 }

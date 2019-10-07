@@ -13,15 +13,34 @@ struct MyNavigation: AppNavigation {
         if let navigation = navigation as? MyRouter {
             switch navigation {
             case .addContact:
-                break
-            case .updateContact(_):
-                break
+                let sb = UIStoryboard(name: "AddContactStoryboard", bundle: nil)
+                let navController = sb.instantiateViewController(withIdentifier: "AddContactNC")
+                return navController
+            case .updateContact(let contact):
+                let sb = UIStoryboard(name: "AddContactStoryboard", bundle: nil)
+                let navController = sb.instantiateViewController(withIdentifier: "AddContactNC") as! UINavigationController
+                guard let addContactVC = navController.topViewController as? AddContactViewController else {
+                    return UIViewController()
+                }
+                addContactVC.contact = contact
+                return addContactVC
             }
         }
         return UIViewController()
     }
     
     func navigate(_ navigation: Navigation, from: UIViewController, to: UIViewController) {
-        
+        if let navigation = navigation as? MyRouter {
+            switch navigation {
+            case .addContact, .updateContact:
+                from.present(to, animated: true, completion: nil)
+            }
+        }
+    }
+}
+
+extension UIViewController {
+    func navigate(_ navigation: MyRouter) {
+        navigate(navigation as Navigation)
     }
 }
