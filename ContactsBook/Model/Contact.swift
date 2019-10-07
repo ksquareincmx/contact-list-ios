@@ -15,8 +15,14 @@ class Location: Object {
 }
 
 class Contact: Object {
+    @objc dynamic var id = 0
     @objc dynamic var name: String = ""
     @objc dynamic var phone: String = ""
     @objc dynamic var address: String = ""
+    @objc dynamic var imageData: Data? = nil
     @objc dynamic var location: Location? = nil
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

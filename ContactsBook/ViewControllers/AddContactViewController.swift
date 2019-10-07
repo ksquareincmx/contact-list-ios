@@ -28,14 +28,19 @@ class AddContactViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    
     //MARK: - Actions
     @IBAction func chooseLocationButtonAction(_ sender: UIButton) {
         
     }
     
     @IBAction func saveBarButtonAction(_ sender: UIBarButtonItem) {
+        if let contact = contact {
+            //Update contact
+            
+        } else {
+            //Save new contact
+            
+        }
         self.dismiss(animated: true, completion: nil)
     }
     
