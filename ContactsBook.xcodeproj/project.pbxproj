@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A383E4A9234BA46600324F62 /* MyRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A383E4A8234BA46600324F62 /* MyRealm.swift */; };
+		A383E4AC234BD11B00324F62 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A383E4AB234BD11B00324F62 /* Router.swift */; };
+		A383E4AE234BD2AA00324F62 /* MyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A383E4AD234BD2AA00324F62 /* MyRouter.swift */; };
+		A383E4B0234BD2FB00324F62 /* MyNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A383E4AF234BD2FB00324F62 /* MyNavigation.swift */; };
 		A3AD797223464A5A00459F64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AD797123464A5A00459F64 /* AppDelegate.swift */; };
 		A3AD797423464A5A00459F64 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AD797323464A5A00459F64 /* ContactListViewController.swift */; };
 		A3AD797723464A5A00459F64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3AD797523464A5A00459F64 /* Main.storyboard */; };
@@ -24,6 +28,10 @@
 /* Begin PBXFileReference section */
 		629D473B9A39F89D47E346BD /* Pods-ContactsBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsBook.debug.xcconfig"; path = "Target Support Files/Pods-ContactsBook/Pods-ContactsBook.debug.xcconfig"; sourceTree = "<group>"; };
 		6ECE2FC618AFD8C7DF14EC14 /* Pods_ContactsBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactsBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A383E4A8234BA46600324F62 /* MyRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRealm.swift; sourceTree = "<group>"; };
+		A383E4AB234BD11B00324F62 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A383E4AD234BD2AA00324F62 /* MyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRouter.swift; sourceTree = "<group>"; };
+		A383E4AF234BD2FB00324F62 /* MyNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigation.swift; sourceTree = "<group>"; };
 		A3AD796E23464A5A00459F64 /* ContactsBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3AD797123464A5A00459F64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3AD797323464A5A00459F64 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +66,6 @@
 				629D473B9A39F89D47E346BD /* Pods-ContactsBook.debug.xcconfig */,
 				CDA88C93D7928193E76DAE0A /* Pods-ContactsBook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -68,6 +75,24 @@
 				6ECE2FC618AFD8C7DF14EC14 /* Pods_ContactsBook.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A383E4A7234BA23F00324F62 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				A383E4A8234BA46600324F62 /* MyRealm.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		A383E4AA234BD10E00324F62 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A383E4AB234BD11B00324F62 /* Router.swift */,
+				A383E4AD234BD2AA00324F62 /* MyRouter.swift */,
+				A383E4AF234BD2FB00324F62 /* MyNavigation.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		A3AD796523464A5A00459F64 = {
@@ -91,6 +116,8 @@
 		A3AD797023464A5A00459F64 /* ContactsBook */ = {
 			isa = PBXGroup;
 			children = (
+				A383E4AA234BD10E00324F62 /* Router */,
+				A383E4A7234BA23F00324F62 /* Realm */,
 				A3AD79862346501300459F64 /* Views */,
 				A3AD798523464E0400459F64 /* Storyboards */,
 				A3AD798423464DFB00459F64 /* ViewControllers */,
@@ -256,10 +283,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A383E4AC234BD11B00324F62 /* Router.swift in Sources */,
+				A383E4AE234BD2AA00324F62 /* MyRouter.swift in Sources */,
+				A383E4A9234BA46600324F62 /* MyRealm.swift in Sources */,
 				A3AF1F052347BB290013618B /* Contact.swift in Sources */,
 				A3AF1F012347B6C60013618B /* AddContactViewController.swift in Sources */,
 				A3AD798C2346582800459F64 /* FavoriteImageView.swift in Sources */,
 				A3AD79892346503C00459F64 /* ContactTableViewCell.swift in Sources */,
+				A383E4B0234BD2FB00324F62 /* MyNavigation.swift in Sources */,
 				A3AD797423464A5A00459F64 /* ContactListViewController.swift in Sources */,
 				A3AD797223464A5A00459F64 /* AppDelegate.swift in Sources */,
 			);

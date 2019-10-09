@@ -15,14 +15,19 @@ class ContactTableViewCell: UITableViewCell {
     @IBOutlet weak var favImageView: FavoriteImageView!
     @IBOutlet weak var photoImageView: UIImageView!
     
+    var contact: Contact! {
+        didSet {
+            self.setupInfo()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    private func setupInfo() {
+        self.nameLabel.text = self.contact.name
+        self.phoneLabel.text = self.contact.phone
     }
 }
