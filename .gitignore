@@ -16,11 +16,13 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+.DS_Store
 
 ## Other
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+
 
 ## Obj-C/Swift specific
 *.hmap
