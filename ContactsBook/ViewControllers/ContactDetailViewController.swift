@@ -9,7 +9,9 @@
 import UIKit
 
 class ContactDetailViewController: UIViewController {
-
+    
+    @IBOutlet weak var detailTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

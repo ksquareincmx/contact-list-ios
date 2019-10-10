@@ -11,6 +11,7 @@
 		A360CCB4234FCACC00F3965B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360CCB3234FCACC00F3965B /* ImagePicker.swift */; };
 		A360CCB6234FCE0500F3965B /* UIImageViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360CCB5234FCE0500F3965B /* UIImageViewCircle.swift */; };
 		A360CCC6234FD83E00F3965B /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360CCC5234FD83E00F3965B /* ContactDetailViewController.swift */; };
+		A360CCC8234FD90100F3965B /* ContactDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A360CCC7234FD90100F3965B /* ContactDetailStoryboard.storyboard */; };
 		A383E4A9234BA46600324F62 /* MyRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A383E4A8234BA46600324F62 /* MyRealm.swift */; };
 		A383E4AC234BD11B00324F62 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A383E4AB234BD11B00324F62 /* Router.swift */; };
 		A383E4AE234BD2AA00324F62 /* MyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A383E4AD234BD2AA00324F62 /* MyRouter.swift */; };
@@ -36,6 +37,7 @@
 		A360CCB3234FCACC00F3965B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		A360CCB5234FCE0500F3965B /* UIImageViewCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewCircle.swift; sourceTree = "<group>"; };
 		A360CCC5234FD83E00F3965B /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		A360CCC7234FD90100F3965B /* ContactDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		A383E4A8234BA46600324F62 /* MyRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRealm.swift; sourceTree = "<group>"; };
 		A383E4AB234BD11B00324F62 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A383E4AD234BD2AA00324F62 /* MyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRouter.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				A3AD797523464A5A00459F64 /* Main.storyboard */,
 				A3AF1F022347B81E0013618B /* AddContactStoryboard.storyboard */,
+				A360CCC7234FD90100F3965B /* ContactDetailStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3AD798A2346503C00459F64 /* ContactTableViewCell.xib in Resources */,
+				A360CCC8234FD90100F3965B /* ContactDetailStoryboard.storyboard in Resources */,
 				A3AD797C23464A5B00459F64 /* LaunchScreen.storyboard in Resources */,
 				A3AD797923464A5B00459F64 /* Assets.xcassets in Resources */,
 				A3AF1F032347B81E0013618B /* AddContactStoryboard.storyboard in Resources */,
