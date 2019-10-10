@@ -10,6 +10,7 @@
 		A360CCB1234F8EA700F3965B /* UIImageView+Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360CCB0234F8EA700F3965B /* UIImageView+Clickable.swift */; };
 		A360CCB4234FCACC00F3965B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360CCB3234FCACC00F3965B /* ImagePicker.swift */; };
 		A360CCB6234FCE0500F3965B /* UIImageViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360CCB5234FCE0500F3965B /* UIImageViewCircle.swift */; };
+		A360CCC6234FD83E00F3965B /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360CCC5234FD83E00F3965B /* ContactDetailViewController.swift */; };
 		A383E4A9234BA46600324F62 /* MyRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A383E4A8234BA46600324F62 /* MyRealm.swift */; };
 		A383E4AC234BD11B00324F62 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A383E4AB234BD11B00324F62 /* Router.swift */; };
 		A383E4AE234BD2AA00324F62 /* MyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A383E4AD234BD2AA00324F62 /* MyRouter.swift */; };
@@ -34,6 +35,7 @@
 		A360CCB0234F8EA700F3965B /* UIImageView+Clickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Clickable.swift"; sourceTree = "<group>"; };
 		A360CCB3234FCACC00F3965B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		A360CCB5234FCE0500F3965B /* UIImageViewCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewCircle.swift; sourceTree = "<group>"; };
+		A360CCC5234FD83E00F3965B /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		A383E4A8234BA46600324F62 /* MyRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRealm.swift; sourceTree = "<group>"; };
 		A383E4AB234BD11B00324F62 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A383E4AD234BD2AA00324F62 /* MyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRouter.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				A3AD797323464A5A00459F64 /* ContactListViewController.swift */,
 				A3AF1F002347B6C60013618B /* AddContactViewController.swift */,
+				A360CCC5234FD83E00F3965B /* ContactDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				A3AD798C2346582800459F64 /* FavoriteImageView.swift in Sources */,
 				A3AD79892346503C00459F64 /* ContactTableViewCell.swift in Sources */,
 				A383E4B0234BD2FB00324F62 /* MyNavigation.swift in Sources */,
+				A360CCC6234FD83E00F3965B /* ContactDetailViewController.swift in Sources */,
 				A360CCB4234FCACC00F3965B /* ImagePicker.swift in Sources */,
 				A3AD797423464A5A00459F64 /* ContactListViewController.swift in Sources */,
 				A3AD797223464A5A00459F64 /* AppDelegate.swift in Sources */,
