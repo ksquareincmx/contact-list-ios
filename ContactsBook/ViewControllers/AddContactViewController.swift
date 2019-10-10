@@ -25,13 +25,47 @@ class AddContactViewController: UIViewController {
     var contact: Contact?
     lazy var myRealm = MyRealm()
     var delegate: AddContactViewControllerDelegate?
+    lazy var imagePicker: ImagePicker = {
+        let picker = ImagePicker(presentationController: self, delegate: self)
+        return picker
+    }()
     
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.setup()
+    }
+    
+    //MARK: - Setup
+    private func setup() {
+        self.setupPhotoImageView()
+        self.setupPhoneTextField()
+        self.setupInfo()
+    }
+    
+    private func setupPhotoImageView() {
+        self.photoImageView.tappable = true
+        self.photoImageView.circle()
+        self.photoImageView.callback = {
+            [weak self] in
+            guard let self = self else {return}
+            self.imagePicker.present(from: self.view)
+        }
+    }
+    
+    private func setupPhoneTextField() {
+        self.phoneTextField.keyboardType = .phonePad
+    }
+    
+    private func setupInfo() {
+        if let contact = contact {
+            self.photoImageView.image = contact.image
+            self.phoneTextField.text = contact.phone
+            self.addressTextField.text = contact.address
+            self.nameTextField.text = contact.name
+        }
     }
     
     //MARK: - Actions
@@ -53,15 +87,22 @@ class AddContactViewController: UIViewController {
             newContact.name = name
             newContact.phone = phone
             newContact.address = address
+            newContact.imageData = self.photoImageView.image?.pngData()
             self.myRealm.write(newContact)
             self.dismiss(animated: true) {
                 self.delegate?.didAddContact()
             }
         }
-        
     }
     
     @IBAction func cancelBarButtonAction(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+//MARK: - Extension ImagePickerDelegate
+extension AddContactViewController: ImagePickerDelegate {
+    func didSelect(image: UIImage?) {
+        self.photoImageView.image = image
     }
 }

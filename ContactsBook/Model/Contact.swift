@@ -21,6 +21,12 @@ class Contact: Object {
     @objc dynamic var address: String = ""
     @objc dynamic var imageData: Data? = nil
     @objc dynamic var location: Location? = nil
+    var image: UIImage? {
+        guard let data = self.imageData, let img = UIImage(data: data) else {
+            return nil
+        }
+        return img
+    }
     
     override static func primaryKey() -> String? {
         return "id"
