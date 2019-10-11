@@ -28,7 +28,15 @@ struct MyNavigation: AppNavigation {
                 }
                 addContactVC.contact = contact
                 addContactVC.delegate = delegate
-                return addContactVC
+                return navController
+                
+            case .contactDetail(let contact):
+                let sb = UIStoryboard(name: "ContactDetailStoryboard", bundle: nil)
+                guard let detailVC = sb.instantiateViewController(withIdentifier: "ContactDetailViewController") as? ContactDetailViewController else {
+                    return UIViewController()
+                }
+                detailVC.contact = contact
+                return detailVC
             }
         }
         return UIViewController()
@@ -39,6 +47,8 @@ struct MyNavigation: AppNavigation {
             switch navigation {
             case .addContact, .updateContact:
                 from.present(to, animated: true, completion: nil)
+            case .contactDetail:
+                from.navigationController?.pushViewController(to, animated: true)
             }
         }
     }

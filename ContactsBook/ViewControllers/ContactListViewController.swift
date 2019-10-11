@@ -52,9 +52,19 @@ extension ContactListViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.contacts.count
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let contact = contacts[indexPath.row]
+        self.navigate(.contactDetail(contact: contact))
+    }
 }
 
 extension ContactListViewController: AddContactViewControllerDelegate {
+    func didEditContact() {
+        
+    }
+    
     func didAddContact() {
         self.contactsTableView.reloadData()
     }
