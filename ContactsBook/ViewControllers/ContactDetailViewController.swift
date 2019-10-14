@@ -13,6 +13,7 @@ class ContactDetailViewController: UIViewController {
     //MARK: - UI
     @IBOutlet weak var detailTableView: UITableView!
     var editBarButton: UIBarButtonItem!
+    var photoView = ProfilePhotoView()
     
     //MARK: - Properties
     var contact: Contact!
@@ -35,6 +36,7 @@ class ContactDetailViewController: UIViewController {
         self.detailTableView.delegate = self
         self.detailTableView.dataSource = self
         self.detailTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.detailTableView.setHeader(self.photoView)
     }
     
     private func setupEditBarButton() {
