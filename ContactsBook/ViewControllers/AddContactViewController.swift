@@ -10,6 +10,7 @@ import UIKit
 
 protocol AddContactViewControllerDelegate: class {
     func didAddContact()
+    func didEditContact()
 }
 
 class AddContactViewController: UIViewController {
@@ -61,7 +62,7 @@ class AddContactViewController: UIViewController {
     
     private func setupInfo() {
         if let contact = contact {
-            self.photoImageView.image = contact.image
+            self.photoImageView.image = contact.image ?? UIImage(named: "PhotoPlaceholder")
             self.phoneTextField.text = contact.phone
             self.addressTextField.text = contact.address
             self.nameTextField.text = contact.name
@@ -74,15 +75,28 @@ class AddContactViewController: UIViewController {
     }
     
     @IBAction func saveBarButtonAction(_ sender: UIBarButtonItem) {
-        if let _ = contact {
+        guard let name = self.nameTextField.text, let phone = self.phoneTextField.text, let address = self.addressTextField.text else {
+            
+            return
+        }
+        
+        if let contact = contact {
             //Update contact
             
-            
+            self.myRealm.update {
+                contact.name = name
+                contact.phone = phone
+                contact.address = address
+                contact.imageData = self.photoImageView.image?.pngData()
+            }
+            self.dismiss(animated: true) {
+                [weak self] in
+                guard let self = self else {return}
+                self.delegate?.didEditContact()
+            }
         } else {
             //Save new contact
-            guard let name = self.nameTextField.text, let phone = self.phoneTextField.text, let address = self.addressTextField.text else {
-                return
-            }
+            
             let newContact = Contact()
             newContact.name = name
             newContact.phone = phone
@@ -90,6 +104,8 @@ class AddContactViewController: UIViewController {
             newContact.imageData = self.photoImageView.image?.pngData()
             self.myRealm.write(newContact)
             self.dismiss(animated: true) {
+                [weak self] in
+                guard let self = self else {return}
                 self.delegate?.didAddContact()
             }
         }

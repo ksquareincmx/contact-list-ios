@@ -23,11 +23,19 @@ class ContactTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.setup()
+    }
+    
+    private func setup() {
+        DispatchQueue.main.async {
+            self.photoImageView.circle()
+        }
     }
 
     private func setupInfo() {
         self.nameLabel.text = self.contact.name
         self.phoneLabel.text = self.contact.phone
+        self.photoImageView.image = self.contact.image ?? #imageLiteral(resourceName: "PhotoPlaceholder")
     }
 }

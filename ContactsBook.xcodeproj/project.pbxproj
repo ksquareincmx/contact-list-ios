@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A33674D92354D0640013645E /* ProfilePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33674D82354D0640013645E /* ProfilePhotoView.swift */; };
+		A33674DB2354D11B0013645E /* ProfilePhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33674DA2354D11B0013645E /* ProfilePhotoView.xib */; };
+		A33674DD2354D6BF0013645E /* UITableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33674DC2354D6BF0013645E /* UITableViewHeader.swift */; };
 		A360CCB1234F8EA700F3965B /* UIImageView+Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360CCB0234F8EA700F3965B /* UIImageView+Clickable.swift */; };
 		A360CCB4234FCACC00F3965B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360CCB3234FCACC00F3965B /* ImagePicker.swift */; };
 		A360CCB6234FCE0500F3965B /* UIImageViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360CCB5234FCE0500F3965B /* UIImageViewCircle.swift */; };
+		A360CCC6234FD83E00F3965B /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A360CCC5234FD83E00F3965B /* ContactDetailViewController.swift */; };
+		A360CCC8234FD90100F3965B /* ContactDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A360CCC7234FD90100F3965B /* ContactDetailStoryboard.storyboard */; };
 		A383E4A9234BA46600324F62 /* MyRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A383E4A8234BA46600324F62 /* MyRealm.swift */; };
 		A383E4AC234BD11B00324F62 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A383E4AB234BD11B00324F62 /* Router.swift */; };
 		A383E4AE234BD2AA00324F62 /* MyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A383E4AD234BD2AA00324F62 /* MyRouter.swift */; };
@@ -31,9 +36,14 @@
 /* Begin PBXFileReference section */
 		629D473B9A39F89D47E346BD /* Pods-ContactsBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsBook.debug.xcconfig"; path = "Target Support Files/Pods-ContactsBook/Pods-ContactsBook.debug.xcconfig"; sourceTree = "<group>"; };
 		6ECE2FC618AFD8C7DF14EC14 /* Pods_ContactsBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactsBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33674D82354D0640013645E /* ProfilePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoView.swift; sourceTree = "<group>"; };
+		A33674DA2354D11B0013645E /* ProfilePhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilePhotoView.xib; sourceTree = "<group>"; };
+		A33674DC2354D6BF0013645E /* UITableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewHeader.swift; sourceTree = "<group>"; };
 		A360CCB0234F8EA700F3965B /* UIImageView+Clickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Clickable.swift"; sourceTree = "<group>"; };
 		A360CCB3234FCACC00F3965B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		A360CCB5234FCE0500F3965B /* UIImageViewCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewCircle.swift; sourceTree = "<group>"; };
+		A360CCC5234FD83E00F3965B /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		A360CCC7234FD90100F3965B /* ContactDetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		A383E4A8234BA46600324F62 /* MyRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRealm.swift; sourceTree = "<group>"; };
 		A383E4AB234BD11B00324F62 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A383E4AD234BD2AA00324F62 /* MyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRouter.swift; sourceTree = "<group>"; };
@@ -88,6 +98,7 @@
 			children = (
 				A360CCB0234F8EA700F3965B /* UIImageView+Clickable.swift */,
 				A360CCB5234FCE0500F3965B /* UIImageViewCircle.swift */,
+				A33674DC2354D6BF0013645E /* UITableViewHeader.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -168,6 +179,7 @@
 			children = (
 				A3AD797323464A5A00459F64 /* ContactListViewController.swift */,
 				A3AF1F002347B6C60013618B /* AddContactViewController.swift */,
+				A360CCC5234FD83E00F3965B /* ContactDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,6 +189,7 @@
 			children = (
 				A3AD797523464A5A00459F64 /* Main.storyboard */,
 				A3AF1F022347B81E0013618B /* AddContactStoryboard.storyboard */,
+				A360CCC7234FD90100F3965B /* ContactDetailStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -187,6 +200,8 @@
 				A3AD798B2346582800459F64 /* FavoriteImageView.swift */,
 				A3AD79872346503C00459F64 /* ContactTableViewCell.swift */,
 				A3AD79882346503C00459F64 /* ContactTableViewCell.xib */,
+				A33674D82354D0640013645E /* ProfilePhotoView.swift */,
+				A33674DA2354D11B0013645E /* ProfilePhotoView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -252,9 +267,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3AD798A2346503C00459F64 /* ContactTableViewCell.xib in Resources */,
+				A360CCC8234FD90100F3965B /* ContactDetailStoryboard.storyboard in Resources */,
 				A3AD797C23464A5B00459F64 /* LaunchScreen.storyboard in Resources */,
 				A3AD797923464A5B00459F64 /* Assets.xcassets in Resources */,
 				A3AF1F032347B81E0013618B /* AddContactStoryboard.storyboard in Resources */,
+				A33674DB2354D11B0013645E /* ProfilePhotoView.xib in Resources */,
 				A3AD797723464A5A00459F64 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +328,7 @@
 				A383E4AC234BD11B00324F62 /* Router.swift in Sources */,
 				A383E4AE234BD2AA00324F62 /* MyRouter.swift in Sources */,
 				A383E4A9234BA46600324F62 /* MyRealm.swift in Sources */,
+				A33674D92354D0640013645E /* ProfilePhotoView.swift in Sources */,
 				A360CCB6234FCE0500F3965B /* UIImageViewCircle.swift in Sources */,
 				A3AF1F052347BB290013618B /* Contact.swift in Sources */,
 				A360CCB1234F8EA700F3965B /* UIImageView+Clickable.swift in Sources */,
@@ -318,6 +336,8 @@
 				A3AD798C2346582800459F64 /* FavoriteImageView.swift in Sources */,
 				A3AD79892346503C00459F64 /* ContactTableViewCell.swift in Sources */,
 				A383E4B0234BD2FB00324F62 /* MyNavigation.swift in Sources */,
+				A360CCC6234FD83E00F3965B /* ContactDetailViewController.swift in Sources */,
+				A33674DD2354D6BF0013645E /* UITableViewHeader.swift in Sources */,
 				A360CCB4234FCACC00F3965B /* ImagePicker.swift in Sources */,
 				A3AD797423464A5A00459F64 /* ContactListViewController.swift in Sources */,
 				A3AD797223464A5A00459F64 /* AppDelegate.swift in Sources */,
