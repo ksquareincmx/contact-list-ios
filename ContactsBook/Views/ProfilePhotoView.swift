@@ -15,10 +15,20 @@ class ProfilePhotoView: UIView {
     @IBOutlet weak var photoImageView: UIImageView!
     
     //MARK: - Properties
-    var photo: UIImage?
+    var photo: UIImage? {
+        didSet {
+            self.setupImage()
+        }
+    }
     
     //MARK: - Setup
     private func setup() {
+        DispatchQueue.main.async {
+            self.photoImageView.circle()
+        }
+    }
+    
+    private func setupImage() {
         if let photo = photo {
             self.photoImageView.image = photo
         } else {

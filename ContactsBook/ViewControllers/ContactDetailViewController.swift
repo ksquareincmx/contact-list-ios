@@ -36,6 +36,7 @@ class ContactDetailViewController: UIViewController {
         self.detailTableView.delegate = self
         self.detailTableView.dataSource = self
         self.detailTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.photoView.photo = self.contact.image
         self.detailTableView.setHeader(self.photoView)
     }
     
@@ -91,7 +92,8 @@ extension ContactDetailViewController: UITableViewDataSource, UITableViewDelegat
 //MARK: - Extension
 extension ContactDetailViewController: AddContactViewControllerDelegate {
     func didEditContact() {
-        print("Did edit contact")
+        self.photoView.photo = self.contact.image
+        self.detailTableView.reloadData()
     }
     
     func didAddContact() {

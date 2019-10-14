@@ -23,6 +23,11 @@ class ContactListViewController: UIViewController {
         self.setupTableView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.contactsTableView.reloadData()
+    }
+    
     //MARK: - Setup
     private func setupTableView() {
         self.contactsTableView.dataSource = self

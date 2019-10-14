@@ -75,9 +75,20 @@ class AddContactViewController: UIViewController {
     }
     
     @IBAction func saveBarButtonAction(_ sender: UIBarButtonItem) {
-        if let _ = contact {
+        guard let name = self.nameTextField.text, let phone = self.phoneTextField.text, let address = self.addressTextField.text else {
+            
+            return
+        }
+        
+        if let contact = contact {
             //Update contact
             
+            self.myRealm.update {
+                contact.name = name
+                contact.phone = phone
+                contact.address = address
+                contact.imageData = self.photoImageView.image?.pngData()
+            }
             self.dismiss(animated: true) {
                 [weak self] in
                 guard let self = self else {return}
@@ -85,9 +96,7 @@ class AddContactViewController: UIViewController {
             }
         } else {
             //Save new contact
-            guard let name = self.nameTextField.text, let phone = self.phoneTextField.text, let address = self.addressTextField.text else {
-                return
-            }
+            
             let newContact = Contact()
             newContact.name = name
             newContact.phone = phone
