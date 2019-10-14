@@ -20,8 +20,8 @@ class FavoriteImageView: UIImageView {
     var isFavorite = false
     weak var delegate: FavoriteImageViewDelegate?
     
-    var fullImage = #imageLiteral(resourceName: "FavIcon")
-    var emptyImage = #imageLiteral(resourceName: "FavIcon")
+    var fullImage = #imageLiteral(resourceName: "FillFavIcon")
+    var emptyImage = #imageLiteral(resourceName: "EmptyFavIcon")
     
     //MARK: - Inits
     
