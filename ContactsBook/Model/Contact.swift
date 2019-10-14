@@ -21,6 +21,7 @@ class Contact: Object {
     @objc dynamic var address: String = ""
     @objc dynamic var imageData: Data? = nil
     @objc dynamic var location: Location? = nil
+    @objc dynamic var isFavorite = false
     var image: UIImage? {
         guard let data = self.imageData, let img = UIImage(data: data) else {
             return nil
