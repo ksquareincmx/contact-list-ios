@@ -6,6 +6,6 @@ target 'ContactsBook' do
   use_frameworks!
 
   # Pods for ContactsBook
-  pod 'RealmSwift'
+  pod 'RealmSwift', '~> 3.19.0'
 
 end
