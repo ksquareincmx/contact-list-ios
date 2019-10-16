@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ContactTableViewCell" customModule="ContactsBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhotoPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="sAr-In-xP5">
+                        <rect key="frame" x="20" y="8" width="83" height="83"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="sAr-In-xP5" secondAttribute="height" multiplier="1:1" id="DZ0-yO-QDO"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aldo Archundia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tA8-cz-wd5">
+                        <rect key="frame" x="111" y="8" width="114" height="40"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9991232312" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLH-lo-wu7">
+                        <rect key="frame" x="111" y="56" width="95" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FavIcon" translatesAutoresizingMaskIntoConstraints="NO" id="XS2-hS-1kL" customClass="FavoriteImageView" customModule="ContactsBook" customModuleProvider="target">
+                        <rect key="frame" x="354" y="30" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="XS2-hS-1kL" secondAttribute="height" multiplier="1:1" id="lus-Sp-US7"/>
+                            <constraint firstAttribute="width" constant="40" id="qYY-dK-lRh"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tA8-cz-wd5" firstAttribute="leading" secondItem="sAr-In-xP5" secondAttribute="trailing" constant="8" id="9R9-bo-nZA"/>
+                    <constraint firstItem="tA8-cz-wd5" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.4" id="9m2-qv-g5Z"/>
+                    <constraint firstItem="XLH-lo-wu7" firstAttribute="top" secondItem="tA8-cz-wd5" secondAttribute="bottom" constant="8" id="CIX-eY-QLf"/>
+                    <constraint firstItem="XS2-hS-1kL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DQI-Ei-iG0"/>
+                    <constraint firstItem="sAr-In-xP5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Wcq-3Q-oOv"/>
+                    <constraint firstItem="sAr-In-xP5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="d2p-yU-xWe"/>
+                    <constraint firstAttribute="trailing" secondItem="XS2-hS-1kL" secondAttribute="trailing" constant="20" id="dsK-qk-nof"/>
+                    <constraint firstItem="XLH-lo-wu7" firstAttribute="leading" secondItem="sAr-In-xP5" secondAttribute="trailing" constant="8" id="fbe-oO-yzF"/>
+                    <constraint firstItem="sAr-In-xP5" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.2" id="hZU-R3-A82"/>
+                    <constraint firstItem="tA8-cz-wd5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="tFd-Sf-r7l"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="favImageView" destination="XS2-hS-1kL" id="J03-ut-EMP"/>
+                <outlet property="nameLabel" destination="tA8-cz-wd5" id="j2h-Ax-eHB"/>
+                <outlet property="phoneLabel" destination="XLH-lo-wu7" id="Ej0-F4-f1a"/>
+                <outlet property="photoImageView" destination="sAr-In-xP5" id="mvM-MN-oX4"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="FavIcon" width="32" height="32"/>
+        <image name="PhotoPlaceholder" width="128" height="128"/>
+    </resources>
+</document>
